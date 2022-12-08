@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Script>
+  <Context>Zen26</Context>
+  <Version>1.0</Version>
+  <Language>Python</Language>
+  <Text>from System.IO import File, Directory, FileInfo, Path
+
+## Remove all open documents
+Zen.Application.Documents.RemoveAll()
+
+window = Zen.Windows.CreateWindow('Define a directory')
+window.AddFolderBrowser('folder','Directory')
+result = window.Show()
+path = result.GetValue('folder')
+
+print(path)
+
+files = Directory.GetFiles(path)
+print(files)
+
+for i in range(0, files.Length):
+    file = files[i]
+    file_info = FileInfo(file)
+    combo = Path.Combine(path, file_info.Name)
+    image = Zen.Application.LoadImage(combo, False)
+    #project full range
+    zcount = int(image.Metadata.ZStackCount)
+    image = Zen.Processing.Transformation.Geometric.OrthoView(image, ZenViewDirection.Frontal, 0,zcount, ZenProjectionMethod.Maximum, False, False)
+    # save n clear
+        
+    Zen.Application.Save(image, Path.Combine(path,"Projection_"+file_info.Name) , False)
+    
+    Zen.Application.Documents.RemoveAll()
+</Text>
+  <Author></Author>
+  <Description></Description>
+  <Keywords></Keywords>
+  <Row>14</Row>
+  <Column>13</Column>
+</Script>

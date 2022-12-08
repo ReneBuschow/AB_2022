@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Model Version="1">
+  <Id>1cc68bff-5685-426e-a525-57f8d2730b0a</Id>
+  <ModelName>IG_200527_stembryo</ModelName>
+  <Status>Untrained</Status>
+  <FeatureExtractor>Default</FeatureExtractor>
+  <Postprocessing>None</Postprocessing>
+  <ColorHandling>SplitRgb</ColorHandling>
+  <Channels />
+  <TrainingClasses />
+</Model>
