@@ -49,7 +49,7 @@ IG-250520_bf_only_v3_ai.czias/ image analysis morphometrics
 
 1cc68bff-5685-426e-a525-57f8d2730b0a.xml & 2c6ffef5-2412-4ab3-8637-50bc9c2a55a6.model / intellesis model
 	
-To streamline our worksflows use custome macro/batch function for automated processing our data. Here we have a short snippet that runs thorugh folders with imaging z-stack data and produces Max-Intensity-Projection.
+To streamline our worksflows we use custome macro/batch functions for automated data processing. Here we have a short snippet that runs through folders with imaging z-stack and produces Max-Intensity-Projection.
 
 RB_mip_projector.czmac / batch function
 
